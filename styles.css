@@ -1,0 +1,209 @@
+@font-face {
+    font-family: ChristmasBold;
+    src: url("Assets/Fonts/MountainsofChristmas-Bold.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: ChristmasRegular;
+    src: url("Assets/Fonts/MountainsofChristmas-Regular.ttf") format("truetype")
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(rgb(231, 241, 238), rgb(5, 143, 58));
+}
+
+.page-title {
+    color: #f00808;
+    font-family: ChristmasBold, serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+}
+
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    color: #f00808;
+    font-family: ChristmasRegular, serif;
+    font-size: 4em;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px auto;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.card {
+    position: relative;
+    background-color: rgb(231, 241, 238), rgb(5, 143, 58);
+    height: 175px;
+    width: 125px;
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 500ms ease-in-out;
+    backface-visibility: hidden;
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+
+.card.matched .card-value {
+    animation: dance 1s linear infinite 500ms;
+}
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: rgb(247, 6, 6);
+    font-family: ChristmasBold, serif;
+    transition: background-color 500ms forwards;
+}
+
+.overlay-text-small {
+    font-size: .3em;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0, .8);
+        font-size: 10em;
+    }
+}
+
+@keyframes dance {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(30deg);
+    }
+}
+
+.card-back {
+    background-color:green;
+    border-color: rgb(250, 8, 8);
+}
+
+.card-front {
+    background-color: green;
+    border-color: #333;
+    transform: rotateY(180deg);
+}
+
+.card-value {
+    transition: transform 100ms ease-in-out;
+    transform: scale(.9);
+}
+
+.card-front:hover .card-value {
+    transform: scale(1);
+}
+
+.cris-mas {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.card-face:hover .cris-mas {
+    width: 52px;
+    height: 52px;
+}
+
+.cris-mas-top-left {
+    transform: rotate(270deg);
+    top: 0;
+    left: 0;
+}
+
+.cris-mas-top-right {
+    top: 0;
+    right: 0;
+}
+
+.cris-mas-bottom-left {
+    transform: rotate(180deg);
+    bottom: 0;
+    left: 0;
+}
+
+.cris-mas-bottom-right {
+    transform: rotate(90deg);
+    bottom: 0;
+    right: 0;
+}
+
+.snowman {
+    align-self: flex-start;
+    transform: translateY(-10px);
+    transition: transform 100ms ease-in-out;
+}
+
+.card-back:hover .snowman {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
+    .game-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

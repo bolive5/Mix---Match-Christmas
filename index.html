@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" async></script>
+    <title>Mix-Or-Match</title>
+</head>
+<body>
+    <h1 class="page-title">Mix-Or-Match</h1>
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER!
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY!
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="time-remaining">100</span>
+            </div>
+           <!--  <div class="game-info">
+                <button id="btn-restart">Restart</button>
+            </div> -->
+            <div class="game-info">
+                Flips <span id="flips">0</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/elf.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/tree.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/santa.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/santa.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/sleigh.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/snowman.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/candy.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/Reindeer.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/present.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/elf.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/tree.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/Reindeer.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/snowman.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/sleigh.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/present.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/cornersSM.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/cornersSM.png">
+                <img class="snowman" src="Assets/Images/ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="cris-mas cris-mas-top-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-top-right" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-left" src="Assets/Images/border.png">
+                <img class="cris-mas cris-mas-bottom-right" src="Assets/Images/border.png">
+                <img class="card-value" src="Assets/Images/candy.png">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
